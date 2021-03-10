@@ -1,6 +1,6 @@
 {
   "name": "matrix-simple-backup",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "Simple CLI util that backs up all events in a matrix room to an NDJSON file",
   "main": "main.js",
   "author": "Gvido Glazers",
@@ -12,13 +12,9 @@
     "matrix"
   ],
   "type": "module",
-  "private": false,
   "license": "MIT",
-  "scripts": {
-    "backup": "matrix-backup"
-  },
   "bin": {
-    "matrix-backup": "bin.js"
+    "matrix-simple-backup": "bin.js"
   },
   "dependencies": {
     "axios": "^0.21.1",

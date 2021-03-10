@@ -69,8 +69,8 @@ async function doCall (cfg, from) {
     return result.data;
   } catch (e) {
     console.log(e);
+    process.exit();
   }
-  return 5;
 }
 
 async function doBackup (cfg, stream) {
