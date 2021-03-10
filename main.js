@@ -98,17 +98,17 @@ async function doBackup (cfg, stream) {
 async function entry () {
   const cfg = await config();
 
-  //try {
+  try {
     const fileStream = createWriteStream(
       join(process.cwd(), cfg.output),
       { encoding: 'utf-8' }
     );
     await doBackup(cfg, fileStream);
-  //} catch (e) {
-    //process.stderr.write('Something went wrong... \n');
-    //process.stderr.write(e);
-    //process.exit();
-  //}
+  } catch (e) {
+    process.stderr.write('Something went wrong... \n');
+    process.stderr.write(e);
+    process.exit();
+  }
 
   process.stdout.write('\nDone!\n\n');
 }
